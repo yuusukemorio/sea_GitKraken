@@ -16,11 +16,11 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.58
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 5.75
     min: 0
   scatter:
     m_OverrideState: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.93
+    m_Value: 0.42
   contrast:
     m_OverrideState: 1
     m_Value: -5.6
@@ -107,7 +107,7 @@ MonoBehaviour:
     max: 100
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.6468049, g: 0.65111274, b: 0.8018868, a: 1}
+    m_Value: {r: 0.64705884, g: 0.6775054, b: 0.8, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
