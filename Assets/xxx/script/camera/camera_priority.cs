@@ -22,12 +22,14 @@ public class camera_priority : MonoBehaviour
     void Update()
     {
         camera_hantei = CHS.camera_hantei;
-        Debug.Log(OBJ.name);
 
         if (OBJ.name == camera_hantei)
         {
             CVcamera.Priority = 100;
-            Debug.Log(OBJ.name);
+        }
+        else
+        {
+            CVcamera.Priority = 1;
         }
     }
 }

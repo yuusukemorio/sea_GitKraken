@@ -24,30 +24,46 @@ public class walk_sea : MonoBehaviour
             rb.AddForce(force);
             animator.SetInteger("walk", 1);
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+       　if (Input.GetKey(KeyCode.RightArrow))
         {
             //this.transform.position += new Vector3(spd, 0, 0);
             Vector3 force = new Vector3(spd, 0.0f, 0.0f);
             rb.AddForce(force);
             animator.SetInteger("walk", 1);
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             //this.transform.position += new Vector3(0, 0, spd);
             Vector3 force = new Vector3(0.0f, 0.0f, spd);
             rb.AddForce(force);
             animator.SetInteger("walk", 1);
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             //this.transform.position += new Vector3(0, 0, -spd);
             Vector3 force = new Vector3(0.0f, 0.0f, -spd);
             rb.AddForce(force);
             animator.SetInteger("walk", 1);
         }
-        else
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            //this.transform.position += new Vector3(0, 0, -spd);
+            Vector3 force = new Vector3(0.0f, spd, 0.0f);
+            rb.AddForce(force);
+            animator.SetInteger("walk", 2);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Vector3 force = new Vector3(0.0f, -spd, 0.0f);
+            rb.AddForce(force);
+            animator.SetInteger("walk", 1);
+        }
+
+        if(Input.anyKey == false)
         {
             animator.SetInteger("walk", 0);
         }
+
     }
 }
