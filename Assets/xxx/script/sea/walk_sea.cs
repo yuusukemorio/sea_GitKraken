@@ -49,9 +49,10 @@ public class walk_sea : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             //this.transform.position += new Vector3(0, 0, -spd);
+            animator.SetInteger("walk", 2);
             Vector3 force = new Vector3(0.0f, spd, 0.0f);
             rb.AddForce(force);
-            animator.SetInteger("walk", 2);
+
         }
         else if (Input.GetKey(KeyCode.LeftShift))
         {
