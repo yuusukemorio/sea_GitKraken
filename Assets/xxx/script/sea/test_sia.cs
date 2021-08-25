@@ -84,7 +84,7 @@ public class test_sia : MonoBehaviour
                 break;
 
             case 2:
-                transform.position = new Vector3(26f, transform.position.y - 0.25f, 21.8f);
+                transform.position = new Vector3(26f, transform.position.y, 21.73f);
                 transform.rotation = Quaternion.identity;
 
                 animator.SetInteger("walk", 9);
