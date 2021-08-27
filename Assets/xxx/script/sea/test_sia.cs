@@ -18,7 +18,7 @@ public class test_sia : MonoBehaviour
     string akusyon_hantei;
 
     //アクション発火判定
-    int action;
+    public int action;
 
     //地面の判定
     public akusyon_hantei_script ground;
@@ -67,6 +67,10 @@ public class test_sia : MonoBehaviour
             {
                 action = 3;
             }
+            if (akusyon_hantei == "cinema_tabibito_SL")
+            {
+                action = 5;
+            }
         }
         //灯台の上のためだけのスクリプト
         if (Input.GetKey(KeyCode.LeftShift) && target_dir.magnitude > 0.1 && action > 99 == false || Input.GetKey(KeyCode.Space) && target_dir.magnitude > 0.1 && action > 99 == false)
@@ -113,7 +117,30 @@ public class test_sia : MonoBehaviour
                 stop = "STOP";
                 action = 400;//spaceを押すたびに位置が変更されないように特定の数字を入れる
                 break;
+
+            case 5:
+                transform.position = new Vector3(26.21f, 3.43742f, 18.93f);
+                transform.eulerAngles = new Vector3(0f, 21.676f, 0f);
+
+                CC.enabled = false;
+                rb.useGravity = false;
+                stop = "STOP";
+                animator.SetInteger("walk", 0);
+                action = 500;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                break;
         }
+        //=========================================================================================
+        //旅人とのやり取りをキャンセルするプログラム-----------------------------------------------
+        //=========================================================================================
+        if(action == 501)
+        {
+            CC.enabled = true;
+            rb.useGravity = true;
+            stop = "GO";
+            action = 0;
+        }
+
+
 
         //=========================================================================================
         //動きのスクリプトたち---------------------------------------------------------------------
