@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class toudai_hikari1 : MonoBehaviour
 {
@@ -41,6 +42,11 @@ public class toudai_hikari1 : MonoBehaviour
                 timeee += Time.deltaTime *14;
                 LIntensity = timeee;
                 slight.GetComponent<Light>().intensity = LIntensity;
+            }
+            else
+            {
+                SceneManager.LoadScene("end");
+                Debug.Log("end");
             }
         }
     }
