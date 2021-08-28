@@ -17,15 +17,16 @@ public class serihu_SL : MonoBehaviour
 
     public test_sia tSIA;
 
+    private Animator animator;
+
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
 
     void Update()
     {
-        Debug.Log(tSIA.action);
 
         Text score_text = score_object.GetComponent<Text>();
         camera_hantei = CHS.camera_hantei;
@@ -54,7 +55,7 @@ public class serihu_SL : MonoBehaviour
                 score_text.text = "初めまして、水平線急行列車です";
                 break;
             case 2:
-                score_text.text = "遠くから光が見えたのでやってきました";
+                score_text.text = "我々は水平線を目指して走っています";
                 break;
             case 3:
                 score_text.text = "お乗りになられますか？";
@@ -63,10 +64,10 @@ public class serihu_SL : MonoBehaviour
                 score_text.text = "";
                 break;
             case 5:
-                score_text.text = "...";
+                score_text.text = "そうですか、残念です";
                 break;
             case 6:
-                score_text.text = "そうですか、残念です";
+                score_text.text = "...いつになれば水平線へたどり着けるのでしょうか";
                 break;
             case 7:
                 score_text.text = "では、我々はこれで";
@@ -74,6 +75,7 @@ public class serihu_SL : MonoBehaviour
             case 8:
                 score_text.text = "";
                 tSIA.action = 501;
+                animator.SetInteger("SLanima", 1);
                 break;
 
         }

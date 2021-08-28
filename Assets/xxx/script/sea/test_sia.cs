@@ -27,6 +27,12 @@ public class test_sia : MonoBehaviour
     private string Ttoudai_itizurasi = "Down";
     float toudai_time = 0;
 
+
+    //SLのアクションを二回起こさないための変数
+    bool SLanime = false;
+    //SLの向き
+    private Vector3 latestPos;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -67,7 +73,7 @@ public class test_sia : MonoBehaviour
             {
                 action = 3;
             }
-            if (akusyon_hantei == "cinema_tabibito_SL")
+            if (akusyon_hantei == "cinema_tabibito_SL" && SLanime == false)
             {
                 action = 5;
             }
@@ -119,25 +125,48 @@ public class test_sia : MonoBehaviour
                 break;
 
             case 5:
-                transform.position = new Vector3(26.21f, 3.43742f, 18.93f);
-                transform.eulerAngles = new Vector3(0f, 21.676f, 0f);
+                //transform.position = new Vector3(26.21f, 3.43742f, 18.93f);
+                //transform.eulerAngles = new Vector3(0f, 21.676f, 0f);
 
                 CC.enabled = false;
                 rb.useGravity = false;
+                SLanime = true;
+                animator.applyRootMotion = false;
+                transform.position = new Vector3(transform.position.x, 3.34f, transform.position.z);
+
                 stop = "STOP";
-                animator.SetInteger("walk", 0);
-                action = 500;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                animator.SetInteger("walk", 1);
+
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(26.2f, 3.34f, 18.9f), Time.deltaTime * 2);
+                if (transform.position.x < 26.3 && transform.position.x > 26.1)
+                {
+                    action = 500;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                }
+                Vector3 diff = transform.position - latestPos;   //前回からどこに進んだかをベクトルで取得
+                latestPos = transform.position;  //前回のPositionの更新
+                //ベクトルの大きさが0.01以上の時に向きを変える処理をする
+                if (diff.magnitude > 0.01f)
+                {
+                    transform.rotation = Quaternion.LookRotation(diff); //向きを変更する
+                }
+
                 break;
         }
         //=========================================================================================
-        //旅人とのやり取りをキャンセルするプログラム-----------------------------------------------
+        //旅人とのやり取りをキャンセルするプログラムor方向の確定
         //=========================================================================================
-        if(action == 501)
+        if(action == 501)//SL
         {
             CC.enabled = true;
             rb.useGravity = true;
             stop = "GO";
             action = 0;
+        }
+        if (action == 500)//SL
+        {
+            animator.applyRootMotion = true;
+            animator.SetInteger("walk", 0);
+            transform.eulerAngles = new Vector3(0f, 21.676f, 0f);
         }
 
 
