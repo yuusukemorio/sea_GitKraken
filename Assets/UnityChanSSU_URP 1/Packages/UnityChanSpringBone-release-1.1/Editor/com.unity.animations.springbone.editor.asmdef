@@ -3,12 +3,29 @@
     "references": [
         "com.unity.animations.springbone"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
-    "excludePlatforms": [],
+    "excludePlatforms": [
+        "Android",
+        "CloudRendering",
+        "iOS",
+        "LinuxStandalone64",
+        "Lumin",
+        "macOSStandalone",
+        "PS4",
+        "Stadia",
+        "Switch",
+        "tvOS",
+        "WSA",
+        "WebGL",
+        "WindowsStandalone32",
+        "WindowsStandalone64",
+        "XboxOne"
+    ],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": []
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
