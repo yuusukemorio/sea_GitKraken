@@ -61,18 +61,30 @@ public class serihu_SL : MonoBehaviour
                 score_text.text = "お乗りになられますか？";
                 break;
             case 4:
-                score_text.text = "";
+                score_text.text = "...";
                 break;
             case 5:
                 score_text.text = "そうですか、残念です";
                 break;
             case 6:
-                score_text.text = "...いつになれば水平線へたどり着けるのでしょうか";
+                score_text.text = "...そうだ、世間話ですが";
                 break;
             case 7:
-                score_text.text = "では、我々はこれで";
+                score_text.text = "昔、空は白かったらしいですね";
                 break;
             case 8:
+                score_text.text = "でも太陽が海に沈んで、それを知った月が";
+                break;
+            case 9:
+                score_text.text = "黒い涙を流した。";
+                break;
+            case 10:
+                score_text.text = "...";
+                break;
+            case 11:
+                score_text.text = "少し話が長くなりましたね、では我々はこの辺で";
+                break;
+            case 12:
                 score_text.text = "";
                 tSIA.action = 501;
                 animator.SetInteger("SLanima", 1);

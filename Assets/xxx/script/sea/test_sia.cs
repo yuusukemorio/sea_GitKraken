@@ -132,12 +132,12 @@ public class test_sia : MonoBehaviour
                 rb.useGravity = false;
                 SLanime = true;
                 animator.applyRootMotion = false;
-                transform.position = new Vector3(transform.position.x, 3.34f, transform.position.z);
+                transform.position = new Vector3(transform.position.x, 3.437f, transform.position.z);
 
                 stop = "STOP";
                 animator.SetInteger("walk", 1);
 
-                transform.position = Vector3.MoveTowards(transform.position, new Vector3(26.2f, 3.34f, 18.9f), Time.deltaTime * 2);
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(26.2f, 3.437f, 18.9f), Time.deltaTime * 2);
                 if (transform.position.x < 26.3 && transform.position.x > 26.1)
                 {
                     action = 500;//spaceを押すたびに位置が変更されないように特定の数字を入れる
