@@ -30,6 +30,7 @@ public class test_sia : MonoBehaviour
 
     //SLのアクションを二回起こさないための変数
     bool SLanime = false;
+    bool Wakamonoanima = false;
     //SLの向き
     private Vector3 latestPos;
 
@@ -52,14 +53,12 @@ public class test_sia : MonoBehaviour
         //灯台の位置ずらし
         Ttoudai_itizurasi = CHS.camera_hantei;
 
-
-
         //=========================================================================================
         //旅人とやり取りするスクリプトたち---------------------------------------------------------
         //=========================================================================================
 
         //旅人と話をしたか判定
-        if (Input.GetKey(KeyCode.Space) && target_dir.magnitude < 0.1 && action > 99 == false)
+        if (Input.GetKey(KeyCode.Space) && target_dir.magnitude < 0.1 && action < 99)
         {
             if (akusyon_hantei == "a")
             {
@@ -77,9 +76,14 @@ public class test_sia : MonoBehaviour
             {
                 action = 5;
             }
+            if (akusyon_hantei == "cinema_tabibito_wakamono" && Wakamonoanima == false)
+            {
+                action = 6;
+            }
+
         }
         //灯台の上のためだけのスクリプト
-        if (Input.GetKey(KeyCode.LeftShift) && target_dir.magnitude > 0.1 && action > 99 == false || Input.GetKey(KeyCode.Space) && target_dir.magnitude > 0.1 && action > 99 == false)
+        if ((Input.GetKey(KeyCode.LeftShift) && target_dir.magnitude > 0.1 && action < 99) || (Input.GetKey(KeyCode.Space) && target_dir.magnitude > 0.1 && action < 99))
         {
             if (akusyon_hantei == "akusyon_hasigo_up")
             {
@@ -90,7 +94,7 @@ public class test_sia : MonoBehaviour
         switch (action)
         {
             case 1:
-
+                Debug.Log("1番");
                 break;
 
             case 2:
@@ -102,6 +106,7 @@ public class test_sia : MonoBehaviour
                 rb.useGravity = false;
                 stop = "STOP";
                 action = 200;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                Debug.Log("2番");
                 break;
 
             case 3:
@@ -112,6 +117,7 @@ public class test_sia : MonoBehaviour
                 rb.useGravity = false;
                 stop = "STOP";
                 action = 300;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                Debug.Log("3番");
                 break;
 
             case 4:
@@ -122,6 +128,7 @@ public class test_sia : MonoBehaviour
                 rb.useGravity = false;
                 stop = "STOP";
                 action = 400;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                Debug.Log("4番");
                 break;
 
             case 5:
@@ -148,8 +155,22 @@ public class test_sia : MonoBehaviour
                 if (diff.magnitude > 0.01f)
                 {
                     transform.rotation = Quaternion.LookRotation(diff); //向きを変更する
+                    Debug.Log("5番");
                 }
 
+                break;
+            case 6:
+                transform.position = new Vector3(26f, transform.position.y, 21.73f);
+                transform.rotation = Quaternion.identity;
+                Wakamonoanima = true;
+                //animator.applyRootMotion = false;
+                animator.SetInteger("walk", 9);
+                rb.useGravity = false;
+                CC.enabled = false;
+
+                stop = "STOP";
+                action = 600;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                Debug.Log("6番");
                 break;
         }
         //=========================================================================================
@@ -168,6 +189,25 @@ public class test_sia : MonoBehaviour
             animator.SetInteger("walk", 0);
             transform.eulerAngles = new Vector3(0f, 21.676f, 0f);
         }
+
+        if (action == 600)//若者
+        {
+            transform.position = new Vector3(26f, 3.44f, 21.73f);
+        }
+        if (action == 601)//若者
+        {
+            transform.position = new Vector3(26f, 3.44f, 21.73f);
+            animator.SetInteger("walk", 8);
+        }
+        if (action == 602)
+        {
+            CC.enabled = true;
+            rb.useGravity = true;
+            stop = "GO";
+            action = 0;
+        }
+
+
 
 
 
@@ -235,11 +275,13 @@ public class test_sia : MonoBehaviour
             {
                 //transform.position = new Vector3(0.45f, transform.position.y, 21f);
                 transform.position = Vector3.Slerp(new Vector3(0.45f, transform.position.y, 21f), new Vector3(-0.7f, transform.position.y, 22.8f), Time.deltaTime / 8);
+                Debug.Log("Up動いてるよ");
             }
             else if (Ttoudai_itizurasi == "Down")
             {
                 //transform.position = new Vector3(-0.7f, transform.position.y, 22.8f);
                 transform.position = Vector3.Slerp(new Vector3(-0.7f, transform.position.y, 22.8f), new Vector3(0.45f, transform.position.y, 21f), Time.deltaTime / 8);
+                Debug.Log("Down動いてるよ");
             }
         }
 
@@ -286,11 +328,13 @@ public class test_sia : MonoBehaviour
             {
                 //transform.position = new Vector3(0.45f, transform.position.y, 21f);
                 transform.position = Vector3.Slerp(new Vector3(0.45f, transform.position.y, 21f), new Vector3(-0.7f, transform.position.y, 22.8f), Time.deltaTime / 8);
+                Debug.Log("Up動いてるよ2");
             }
             else if (Ttoudai_itizurasi == "Down")
             {
                 //transform.position = new Vector3(-0.7f, transform.position.y, 22.8f);
                 transform.position = Vector3.Slerp(new Vector3(-0.7f, transform.position.y, 22.8f), new Vector3(0.45f, transform.position.y, 21f), Time.deltaTime / 8);
+                Debug.Log("Down動いてるよ2");
             }
         }
 
