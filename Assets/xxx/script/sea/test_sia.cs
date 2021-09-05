@@ -80,6 +80,10 @@ public class test_sia : MonoBehaviour
             {
                 action = 6;
             }
+            if (akusyon_hantei == "cinema_tabibito_usagi" && Wakamonoanima == false)
+            {
+                action = 7;
+            }
 
         }
         //灯台の上のためだけのスクリプト
@@ -172,11 +176,25 @@ public class test_sia : MonoBehaviour
                 action = 600;//spaceを押すたびに位置が変更されないように特定の数字を入れる
                 Debug.Log("6番");
                 break;
+
+            case 7:
+                transform.position = new Vector3(26f, transform.position.y, 21.73f);
+                transform.rotation = Quaternion.identity;
+                Wakamonoanima = true;
+                //animator.applyRootMotion = false;
+                animator.SetInteger("walk", 9);
+                rb.useGravity = false;
+                CC.enabled = false;
+
+                stop = "STOP";
+                action = 700;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                Debug.Log("7番");
+                break;
         }
         //=========================================================================================
         //旅人とのやり取りをキャンセルするプログラムor方向の確定
         //=========================================================================================
-        if(action == 501)//SL
+        if (action == 501)//SL
         {
             CC.enabled = true;
             rb.useGravity = true;
@@ -190,16 +208,16 @@ public class test_sia : MonoBehaviour
             transform.eulerAngles = new Vector3(0f, 21.676f, 0f);
         }
 
-        if (action == 600)//若者
+        if (action == 600 || action == 700)//若者
         {
             transform.position = new Vector3(26f, 3.44f, 21.73f);
         }
-        if (action == 601)//若者
+        if (action == 601 || action == 701)//若者
         {
             transform.position = new Vector3(26f, 3.44f, 21.73f);
             animator.SetInteger("walk", 8);
         }
-        if (action == 602)
+        if (action == 602 || action == 702)
         {
             CC.enabled = true;
             rb.useGravity = true;
