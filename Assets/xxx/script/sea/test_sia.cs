@@ -84,6 +84,10 @@ public class test_sia : MonoBehaviour
             {
                 action = 7;
             }
+            if (akusyon_hantei == "cinema_tabibito_kihuzin" && Wakamonoanima == false)
+            {
+                action = 8;
+            }
 
         }
         //灯台の上のためだけのスクリプト
@@ -189,6 +193,19 @@ public class test_sia : MonoBehaviour
                 stop = "STOP";
                 action = 700;//spaceを押すたびに位置が変更されないように特定の数字を入れる
                 Debug.Log("7番");
+                break;
+            case 8:
+                transform.position = new Vector3(26f, transform.position.y, 21.73f);
+                transform.rotation = Quaternion.identity;
+                Wakamonoanima = true;
+                //animator.applyRootMotion = false;
+                animator.SetInteger("walk", 9);
+                rb.useGravity = false;
+                CC.enabled = false;
+
+                stop = "STOP";
+                action = 800;//spaceを押すたびに位置が変更されないように特定の数字を入れる
+                Debug.Log("8番");
                 break;
         }
         //=========================================================================================
