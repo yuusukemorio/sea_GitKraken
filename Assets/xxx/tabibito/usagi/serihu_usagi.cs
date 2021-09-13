@@ -28,12 +28,10 @@ public class serihu_usagi : MonoBehaviour
         Text score_text = score_object.GetComponent<Text>();
         camera_hantei = CHS.camera_hantei;
 
-        Debug.Log("1");
         if (camera_hantei == "cinema_tabibito_usagi")
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                Debug.Log("2");
                 a = true;
             }
         }
@@ -43,7 +41,6 @@ public class serihu_usagi : MonoBehaviour
             time += Time.deltaTime;
             if (time > 4.5)
             {
-                Debug.Log("3");
                 time = 0;
                 communication += 1;
             }
