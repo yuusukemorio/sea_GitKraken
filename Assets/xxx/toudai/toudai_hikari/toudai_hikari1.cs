@@ -45,8 +45,7 @@ public class toudai_hikari1 : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("end");
-                Debug.Log("end");
+                SceneManager.LoadScene("anten");
             }
         }
     }

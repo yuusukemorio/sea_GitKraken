@@ -6,15 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Sea_Wakamono.unity
+    guid: 5b3d194c42d314ecdaf9f06f78e7cf9a
+  - enabled: 1
+    path: Assets/Scenes/Sea_Game.unity
+    guid: fc967860e2508924e943ba0223c2ed3b
+  - enabled: 1
+    path: Assets/Scenes/Sea_usagi.unity
+    guid: 0e6120f67a0e3584fb33435489536885
+  - enabled: 1
     path: Assets/Scenes/sea_SL.unity
     guid: a6c7b5203046302428a66fdd07467e5a
+  - enabled: 1
+    path: Assets/Scenes/Sea_kihuzin.unity
+    guid: f54b8991070d5490db306d9f0a17da2e
+  - enabled: 1
+    path: Assets/Scenes/Sea_sinri.unity
+    guid: bb9f9f76ece47ff499b6997295bda9e8
+  - enabled: 1
+    path: Assets/Scenes/Sea_kuzira_henka.unity
+    guid: 5b9a2ac507fd0d040bdaa68816956dac
   - enabled: 1
     path: Assets/Scenes/end/end.unity
     guid: 8125bf2f0553d524f81d4c1d7fc740f6
   - enabled: 1
-    path: Assets/Scenes/Sea_Wakamono.unity
-    guid: 5b3d194c42d314ecdaf9f06f78e7cf9a
-  - enabled: 1
-    path: Assets/Scenes/Sea_kuzira_henka.unity
-    guid: 5b9a2ac507fd0d040bdaa68816956dac
+    path: Assets/Scenes/end/anten.unity
+    guid: e195ed55f6d42b74188cc00100c34240
   m_configObjects: {}

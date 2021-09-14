@@ -15,6 +15,8 @@ public class serihu : MonoBehaviour
 
     public GameObject score_object = null; // Textオブジェクト
 
+    public test_sia tSIA;
+
     void Start()
     {
 
@@ -61,37 +63,33 @@ public class serihu : MonoBehaviour
                 score_text.text = "海と空ってのは元々一つだったんだぞ";
                 break;
             case 6:
-                score_text.text = "でもよぉ、太陽が生まれて二つに分断されたんだ";
-                break;
-            case 7:
-                score_text.text = "腹を立てて空は太陽を飲み込んだんだ";
-                break;
-            case 8:
-                score_text.text = "それ知ってよ、月がギャンギャン泣きやがった";
-                break;
-            case 9:
                 score_text.text = "うぇ...";
                 break;
-            case 10:
-                score_text.text = "はぁ";
-                break;
-            case 11:
-                score_text.text = "月の涙は黒いだろ？";
-                break;
-            case 12:
-                score_text.text = "だからここはずっと暗れぇんだよ";
-                break;
-            case 13:
+            case 7:
                 score_text.text = "...";
                 break;
-            case 14:
+            case 8:
+                score_text.text = "月の涙は黒いだろ？";
+                break;
+            case 9:
+                score_text.text = "だからここはずっと暗れぇんだよ";
+                break;
+            case 10:
+                score_text.text = "...";
+                break;
+            case 11:
                 score_text.text = "まぁいずれ分かる";
                 break;
-            case 15:
+            case 12:
                 score_text.text = "じゃぁな";
                 break;
-            case 16:
+            case 13:
                 score_text.text = "";
+                tSIA.action = 601;
+                break;
+            case 14:
+                score_text.text = "";
+                tSIA.action = 602;
                 break;
 
         }

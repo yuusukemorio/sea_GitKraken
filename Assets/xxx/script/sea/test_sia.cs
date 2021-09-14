@@ -58,15 +58,16 @@ public class test_sia : MonoBehaviour
         //=========================================================================================
 
         //旅人と話をしたか判定
-        if (Input.GetKey(KeyCode.Space) && target_dir.magnitude < 0.1 && action < 99)
+        //if (Input.GetKey(KeyCode.Space) && target_dir.magnitude < 0.1 && action < 99)
+        if (Input.GetKey(KeyCode.Space) &&  action < 99)
         {
-            if (akusyon_hantei == "a")
+            if (akusyon_hantei == "cinema_tabibito_sinri")
             {
-                action = 1;
+                action = 6;
             }
             if (akusyon_hantei == "cinema_tabibito_hinkon")
             {
-                action = 2;
+                action = 6;
             }
             if (akusyon_hantei == "akusyon_hasigo")
             {
@@ -82,11 +83,11 @@ public class test_sia : MonoBehaviour
             }
             if (akusyon_hantei == "cinema_tabibito_usagi" && Wakamonoanima == false)
             {
-                action = 7;
+                action = 6;
             }
             if (akusyon_hantei == "cinema_tabibito_kihuzin" && Wakamonoanima == false)
             {
-                action = 8;
+                action = 6;
             }
 
         }

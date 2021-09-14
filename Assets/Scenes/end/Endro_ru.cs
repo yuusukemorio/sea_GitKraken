@@ -20,21 +20,31 @@ public class Endro_ru : MonoBehaviour
 
 
         a += Time.deltaTime;
-        if (a > 3.2)
+        if (a > 8)
         {
-            score_text.text = "to be next";
+            score_text.text = "SIA";
+        }
+        else if (a > 5.5)
+        {
+            score_text.text = "";
+        }
+        else if (a > 3.2)
+        {
+            score_text.text = "end";
         }
         else if (a > 3.1)
         {
-            score_text.text = "to be";
+            score_text.text = "en";
         }
         else if (a > 3)
         {
-            score_text.text = "to";
+            score_text.text = "e";
         }
 
 
-        if (a > 8)
+
+
+        if (a > 14)
         {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

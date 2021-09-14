@@ -68,10 +68,10 @@ public class serihu_kihuzin : MonoBehaviour
                 score_text.text = "初めまして";
                 break;
             case 2:
-                score_text.text = "私は      　　　。";
+                score_text.text = "私は ------------ よ";
                 break;
             case 3:
-                score_text.text = "この世界ってロマンチックよね";
+                score_text.text = "突然だけど、この世界ってロマンチックよね";
                 break;
             case 4:
                 score_text.text = "海と空は互いのことを想っている";

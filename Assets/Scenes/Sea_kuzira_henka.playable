@@ -84,7 +84,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -5052163982682645667}
-    m_Duration: 2.7666666666666666
+    m_Duration: 6.583333333333331
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8068968067661791095}
     m_EaseInDuration: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 2.6666666666666665
     m_ClipIn: 0
     m_Asset: {fileID: -9082382178187210985}
     m_Duration: 14.283333333333333
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 4.816666666666666
+    m_Start: 8.63333333333333
     m_ClipIn: 0
     m_Asset: {fileID: -5975964568317845528}
     m_Duration: 8.233333333333333
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 4.816666666666666
+    m_Start: 8.63333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 1710277383044921586}
     m_Duration: 1.3833333333333337
@@ -618,7 +618,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -7377715699017528995}
-    m_Duration: 2.7666666666666666
+    m_Duration: 5.1
     m_TimeScale: 1
     m_ParentTrack: {fileID: -649924794234454657}
     m_EaseInDuration: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 6.2
+    m_Start: 10.016666666666662
     m_ClipIn: 0
     m_Asset: {fileID: 2127636701289520217}
     m_Duration: 6.849999999999999
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 12.9
+    m_Start: 16.71666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 3308544706052923737}
     m_Duration: 1.9333333333333318
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 3.8166666666666673
     m_ClipIn: 0
     m_Asset: {fileID: -1899721610461259965}
     m_Duration: 14.283333333333333
@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 2.7666666666666666
+    m_Start: 6.583333333333332
     m_ClipIn: 0
     m_Asset: {fileID: 3633441806539591145}
     m_Duration: 2.05
